@@ -24,8 +24,13 @@ public class Gaulois {
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
-		romain.recevoirCoup(force/3);	
+		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom() + ".");
+		romain.recevoirCoup(force*effetPotion/3);	
+	}
+	
+	public void boirePotion(int forcePotion) {
+		effetPotion=forcePotion;
+		parler(" Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
 	}
 	
 //	public String toString() { 
@@ -33,11 +38,10 @@ public class Gaulois {
 //	} 
 //	public static void main(String[] args) {
 //	
-//		//TODO créer un main permettant de tester la classe Gaulois 
-//		Gaulois asterix = new Gaulois ("Astérix",8);
-//		System.out.println(asterix.getNom());
-//		System.out.println(asterix); 
-//		asterix.parler("Bonjour");
+////		//TODO créer un main permettant de tester la classe Gaulois 
+////		Gaulois asterix = new Gaulois ("Astérix",8);
+////		asterix.boirePotion(5);
+
 //	} 	
 }
 
